@@ -1,4 +1,10 @@
-#!/usr/bin/env bash
-set -euo pipefail
-clang -std=c11 -Wall -Wextra -Werror length.c -o length
-echo "Mila" | ./length
+#include <cs50.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("");
+
+    printf("%i\n", strlen(s));
+}
