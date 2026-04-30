@@ -1,4 +1,16 @@
-#!/usr/bin/env bash
-set -euo pipefail
-clang -std=c11 -Wall -Wextra -Werror uppercase.c -o uppercase
-echo "hi there!" | ./uppercase
+#include <cs50.h>
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+
+int main(void)
+{
+    string s = get_string("");
+
+    for (int i = 0; i < strlen(s); i++)
+    {
+        printf("%c", toupper(s[i]));
+    }
+
+    printf("\n");
+}
